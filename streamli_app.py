@@ -28,7 +28,7 @@ if ingredients_list:
     for fruit_chosen in ingredients_list:
         # += operator means "add this to what is already in the variable" so each time the FOR loop is repeated, a new fruit name is appended to the existing string.
         ingredients_string += fruit_chosen + ' '
-        st.subheader(fruit_chosen + ' Nutrition Information'
+        st.subheader(fruit_chosen + ' Nutrition Information')
         smoothiefroot_response = requests.get(f"https://my.smoothiefroot.com/api/fruit/{fruit_chosen}")
         sf_df = st.dataframe(data=smoothiefroot_response.json(),use_container_width=True)
 
